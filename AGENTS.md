@@ -11,7 +11,7 @@ Supported focus areas include general maintenance, tests, dependencies, docs, an
 
 - `src/agents/` — Flue agent modules (discovered by filename)
 - `src/workflows/` — Finite operations invoked via `flue run` or CI
-- `.agents/skills/` — Reusable agent task definitions
+- `src/skills/` — Reusable agent task definitions
 - `.github/workflows/` — GitHub Actions that run the gardener workflow
 - `action.yml` — Composite GitHub Action for use in other repositories
 

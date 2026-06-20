@@ -1,6 +1,6 @@
 import { createAgent } from '@flue/runtime';
 import { local } from '@flue/runtime/node';
-import garden from '../../.agents/skills/garden/SKILL.md' with { type: 'skill' };
+import garden from '../skills/garden/SKILL.md' with { type: 'skill' };
 
 export default createAgent(() => ({
 	skills: [garden],

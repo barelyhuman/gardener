@@ -93,5 +93,5 @@ Copy `.env.example` to `.env` and fill in Cloudflare credentials for local runs.
 
 - `src/agents/` — Flue agent modules
 - `src/workflows/` — Workflows invoked via `flue run` or the GitHub Action
-- `.agents/skills/` — Agent skill definitions
+- `src/skills/` — Agent skill definitions
 - `action.yml` — Composite GitHub Action entry point

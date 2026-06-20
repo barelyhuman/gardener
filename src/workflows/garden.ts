@@ -1,9 +1,6 @@
-import type { WorkflowRouteHandler } from '@flue/runtime';
 import { type FlueContext } from '@flue/runtime';
 import * as v from 'valibot';
 import gardener from '../agents/gardener';
-
-export const route: WorkflowRouteHandler = async (_c, next) => next();
 
 export async function run({ init, payload }: FlueContext<{ focus?: string }>) {
 	const harness = await init(gardener);
