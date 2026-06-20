@@ -2,6 +2,12 @@ import { createAgent } from '@flue/runtime';
 import { local } from '@flue/runtime/node';
 import garden from '../skills/garden/SKILL.md' with { type: 'skill' };
 
+/**
+ * Gardener agent configuration.
+ *
+ * Loads the `garden` skill and runs it inside a local sandbox
+ * rooted at `GARDENER_TARGET_ROOT` (or the current working directory).
+ */
 export default createAgent(() => ({
 	skills: [garden],
 	sandbox: local({

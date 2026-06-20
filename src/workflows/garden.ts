@@ -2,6 +2,12 @@ import { type FlueContext } from '@flue/runtime';
 import * as v from 'valibot';
 import gardener from '../agents/gardener';
 
+/**
+ * Gardener workflow entry point.
+ *
+ * Spins up the Gardener agent, invokes the `garden` skill with the
+ * requested focus area, and validates the structured result.
+ */
 export async function run({ init, payload }: FlueContext<{ focus?: string }>) {
 	const harness = await init(gardener);
 	const session = await harness.session();

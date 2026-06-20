@@ -38,7 +38,7 @@ jobs:
           CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
 ```
 
-Replace `YOUR_ORG/gardener@v1` with your fork or organization. Pin to a release tag (`@v1`, `@v1.0.0`) rather than a branch.
+Replace `YOUR_ORG/gardener@v1` with your fork or organization. Pin to a specific commit SHA or create release tags rather than pointing to a branch.
 
 ## Secrets
 
@@ -93,7 +93,12 @@ Copy `.env.example` to `.env` and fill in Cloudflare credentials for local runs.
 
 ## Project structure
 
-- `src/agents/` — Flue agent modules
+The codebase is written in **TypeScript** and built with the Flue CLI (`npm run build`).
+
+- `src/agents/` — Flue agent modules (auto-discovered by filename)
+  - `gardener.ts` — Main agent that loads the `garden` skill
 - `src/workflows/` — Workflows invoked via `flue run` or the GitHub Action
+  - `garden.ts` — Entry-point workflow that validates payload and runs the agent
 - `src/skills/` — Agent skill definitions
+  - `garden/SKILL.md` — Prompt and instructions for the gardening inspection
 - `action.yml` — Composite GitHub Action entry point
