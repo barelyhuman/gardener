@@ -74,6 +74,17 @@ runs:
            end)
         ' "$RUNNER_TEMP/gardener-result.json" > "$RUNNER_TEMP/gardener-pr-body.md"
 
+    - name: Discard workflow file changes
+      shell: bash
+      working-directory: ${{ github.workspace }}
+      run: |
+        if git diff --quiet -- "${{ inputs.working-directory }}/.github/workflows" 2>/dev/null; then
+          echo "No workflow file changes to discard"
+        else
+          git checkout HEAD -- "${{ inputs.working-directory }}/.github/workflows"
+          echo "Discarded workflow file changes (GITHUB_TOKEN cannot push .github/workflows/)"
+        fi
+
     - name: Create pull request
       uses: peter-evans/create-pull-request@v6
       with:

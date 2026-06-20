@@ -8,7 +8,16 @@ Given the `focus` argument (e.g. "general maintenance", "tests", "dependencies",
 1. Survey the repository structure with `git status`, file listing, and search tools
 2. Identify items aligned with the focus (see focus-specific sections below)
 3. Prefer suggestions over risky auto-fixes in this version
-4. If a safe fix is obvious and low-risk, apply it and note what changed
+4. If a safe fix is obvious and low-risk, apply it and note what changed — **except** for CI workflow files (see below)
+
+## CI / workflow files (read-only)
+
+**Never modify** files under `.github/workflows/` or composite action definitions such as `action.yml`.
+
+- You may read and inspect these files for findings.
+- Do not use edit, write, or patch tools on them.
+- Report workflow or CI issues as `findings` with concrete suggestions; do not apply fixes.
+- Do not list workflow file edits in `actions_taken`.
 
 ## Focus: general maintenance, tests, dependencies, docs
 
@@ -17,6 +26,7 @@ When focus is not `"performance"`, identify maintenance items aligned with the f
 - Stale or missing dependencies
 - Test gaps or failing patterns
 - Documentation drift
+- CI/workflow issues (suggestions only — do not edit `.github/workflows/` or `action.yml`)
 - Small, safe fixes that match project conventions
 
 ## Focus: performance

@@ -74,7 +74,9 @@ permissions:
   pull-requests: write
 ```
 
-`contents: write` is required only when Gardener applies fixes and a PR should be created.
+`contents: write` is required when Gardener applies fixes and a PR should be created.
+
+`GITHUB_TOKEN` cannot push changes under `.github/workflows/` — GitHub requires a PAT with the `workflow` scope for that. Before opening a PR, the action discards any workflow file changes so PR creation succeeds with the default token. Workflow findings still appear in the job summary; apply those edits manually or supply a PAT with `workflow` scope if you need them in the PR.
 
 ## Local development
 
