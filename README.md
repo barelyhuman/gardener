@@ -30,7 +30,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: barelyhuman/gardener@v0
+      - uses: barelyhuman/gardener@v1
         with:
           focus: ${{ inputs.focus }}
         env:
