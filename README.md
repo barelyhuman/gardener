@@ -30,9 +30,9 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: barelyhuman/gardener@v0
+      - uses: barelyhuman/gardener@v1
         with:
-          focus: ${{ inputs.focus }}
+          focus: ${{ inputs.focus || 'general maintenance' }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
