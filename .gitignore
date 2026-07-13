@@ -1,4 +1,8 @@
 node_modules/
 dist/
 .env
+.env.*
+!.env.example
 .flue-vite
+.DS_Store
+*.log
