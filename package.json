@@ -12,11 +12,27 @@
   "type": "module",
   "dependencies": {
     "@flue/runtime": "^1.0.0-beta.2",
-    "valibot": "^1.4.1"
+    "valibot": "^1.4.2"
   },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barelyhuman/gardener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/barelyhuman/gardener/issues"
+  },
+  "homepage": "https://github.com/barelyhuman/gardener#readme",
+  "files": [
+    "dist",
+    "action.yml"
+  ],
   "devDependencies": {
     "@dotenvx/dotenvx": "^1.75.0",
     "@flue/cli": "^1.0.0-beta.1",
+    "@types/node": "^22.0.0",
     "typescript": "^6.0.3"
   }
 }
