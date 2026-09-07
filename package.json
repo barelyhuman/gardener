@@ -3,16 +3,28 @@
   "version": "1.0.0",
   "description": "Flue agent and workflow that inspect codebases for maintenance work and performance inefficiencies",
   "main": "index.js",
-  "scripts": {
-    "build": "flue build --target node"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barelyhuman/gardener.git"
+  },
+  "bugs": {
+    "url": "https://github.com/barelyhuman/gardener/issues"
+  },
+  "homepage": "https://github.com/barelyhuman/gardener#readme",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "flue build --target node",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
   "dependencies": {
     "@flue/runtime": "^1.0.0-beta.2",
-    "valibot": "^1.4.1"
+    "valibot": "^1.4.2"
   },
   "devDependencies": {
     "@dotenvx/dotenvx": "^1.75.0",
