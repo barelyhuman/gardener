@@ -2,7 +2,7 @@
   "name": "gardener",
   "version": "1.0.0",
   "description": "Flue agent and workflow that inspect codebases for maintenance work and performance inefficiencies",
-  "main": "index.js",
+  "main": "dist/server.mjs",
   "scripts": {
     "build": "flue build --target node"
   },
@@ -10,6 +10,16 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "src",
+    "action.yml",
+    "README.md",
+    "AGENTS.md"
+  ],
   "dependencies": {
     "@flue/runtime": "^1.0.0-beta.2",
     "valibot": "^1.4.1"
