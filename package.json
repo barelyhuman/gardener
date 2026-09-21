@@ -6,7 +6,16 @@
   "scripts": {
     "build": "flue build --target node"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barelyhuman/gardener.git"
+  },
+  "keywords": [
+    "flue",
+    "agent",
+    "maintenance",
+    "github-action"
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",
